@@ -8,6 +8,11 @@ ribbonv2.py: contains the ribbon model
 
 standalone_model.ipynb: running the model in ribbonv2.py with specified stimulus and model parameters. 
 
-### data-folder:
+### data - folder:
 
-containing the stimulus and experimental recordings for the release of two BC.
+Contains the stimulus and experimental recordings for the release of two BC.
+
+### generalized_method - folder
+
+Contains a simple example how to generalize the presented method to other problems. Including the essential steps of defining a meaningful loss function and prior distributions.
+The essential sampling and updating functions are in abc_method.py and not specific to the model.
