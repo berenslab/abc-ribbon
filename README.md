@@ -12,7 +12,12 @@ standalone_model.ipynb: running the model in ribbonv2.py with specified stimulus
 
 Contains the stimulus and experimental recordings for the release of two BC.
 
-### generalized_method - folder
+### generalized_method - folder:
 
 Contains a simple example how to generalize the presented method to other problems. Including the essential steps of defining a meaningful loss function and prior distributions.
 The essential sampling and updating functions are in abc_method.py and not specific to the model.
+
+
+### poster - folder:
+
+Contains the poster which will be presented at NeurIPS conference. At the moment still a dummy version.
