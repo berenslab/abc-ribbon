@@ -10,7 +10,8 @@ standalone_model.ipynb: running the model in ribbonv2.py with specified stimulus
 
 ### data - folder:
 
-Contains the stimulus and experimental recordings for the release of two BC.
+Contains the stimulus and experimental recordings for the release of two BC in preprocessed version.
+Also the dF/F example traces for one cell are stored.
 And a notebook for showing the data.
 
 ### generalized_method - folder:
