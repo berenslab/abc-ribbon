@@ -11,6 +11,7 @@ standalone_model.ipynb: running the model in ribbonv2.py with specified stimulus
 ### data - folder:
 
 Contains the stimulus and experimental recordings for the release of two BC.
+And a notebook for showing the data.
 
 ### generalized_method - folder:
 
@@ -20,4 +21,4 @@ The essential sampling and updating functions are in abc_method.py and not speci
 
 ### poster - folder:
 
-Contains the poster which will be presented at NeurIPS conference. At the moment still a dummy version.
+Contains the poster which will be presented at NeurIPS conference. 
