@@ -1,12 +1,8 @@
-# abc-ribbon
+# abc-ribbon: Approximate Bayesian Inference and a Stochastic Model of a Ribbon Synapse
 
-Code accompanying the paper "Approximate Bayesian Inference for a Mechanistic model of Vesicle Release at a Ribbon Synapse" (Schröder, James et al. Preprint: https://doi.org/10.1101/669218 )
+Code accompanying the paper "Approximate Bayesian Inference for a Mechanistic model of Vesicle Release at a Ribbon Synapse" (Schröder, James et al. Preprint: https://doi.org/10.1101/669218 , NeurIPS version: https://papers.nips.cc/paper/8929-approximate-bayesian-inference-for-a-mechanistic-model-of-vesicle-release-at-a-ribbon-synapse )
 
 ## File descriptions:
-
-ribbonv2.py: contains the ribbon model
-
-standalone_model.ipynb: running the model in ribbonv2.py with specified stimulus and model parameters. 
 
 ### data - folder:
 
@@ -23,3 +19,20 @@ The essential sampling and updating functions are in abc_method.py and not speci
 ### poster - folder:
 
 Contains the poster which will be presented at NeurIPS conference. 
+
+### paper_version - folder:
+
+Contains all files for the presented ABC method. Contains all files to reproduce the plots of the paper.
+
+
+### standalone_model -folder:
+If you are only interested in the stochastic model of the ribbon synapse, look here.
+
+ribbonv2.py: contains the ribbon model
+
+standalone_model.ipynb: running the model in ribbonv2.py with specified stimulus and model parameters. 
+
+
+
+
+
