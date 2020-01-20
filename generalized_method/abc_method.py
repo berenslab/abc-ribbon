@@ -68,18 +68,25 @@ def drawSamps(hyperMat, nSamps):
     
     '''
     # code snippet to truncate the (draws from the) distribution
-    # needs to be adapted
-    kSamps = draws[:, 0]
-    x0Samps = draws[:, 1]
+    # param_labels = ['k','x0', 'refill RRP', 'refill IP', 'RRP', 'IP', 'rho', 'kernelscale']
+    boundaries = np.zeros((8,2))
+    boundaries[0] = [1,np.inf]
+    boundaries[1] = [-5,5]
+    boundaries[2] = [0,np.inf]
+    boundaries[3] = [0,np.inf]
+    boundaries[4] = [0,np.inf]
+    boundaries[5] = [0,np.inf]
+    boundaries[6] = [0.01,0.99]
+    boundaries[7] = [0.01,np.inf]
 
-    while (sum(kSamps < cuts_k[0]) + sum(kSamps > cuts_k[1]) + sum(x0Samps < cuts_x0[0]) + sum(
-            x0Samps > cuts_x0[1])) != 0:
+    while not( (draws > boundaries[:,0]).all()  and (draws < boundaries[:,1]).all()):
         for i in range(0, int(nSamps)):
-            if kSamps[i] < cuts_k[0] or kSamps[i] > cuts_k[1] or x0Samps[i] < cuts_x0[0] or x0Samps[i] > cuts_x0[1]:
-                sigma1 = invwishart(df=nun,
-                                    scale=Lambdan).rvs()  # take care scale is here the "precision" E[~] = ...*Lambdan
-                draw1 = np.array(scp.stats.multivariate_normal(mean=muns, cov=sigma1).rvs())
-                kSamps[i] = draw1[0]
-                x0Samps[i] = draw1[1]
+            if not( (draws[i] > boundaries[:,0]).all() and (draws[i] < boundaries[:,1]).all()):
+                sigma1= scipy.stats.invwishart(df=nun, scale=Lambdan).rvs(
+                            size=1)  # take care scale is here the "precision" E[~] = ...*Lambdan
+
+                draw1 = scp.stats.multivariate_normal(mean=muns, cov=sigma1).rvs()
+                draws[i] = draw1
     '''
+
     return draws
